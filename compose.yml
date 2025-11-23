@@ -7,7 +7,7 @@ services:
       dockerfile: ./compose/flask/Dockerfile
     environment:
       API_TOKEN: "Token 1234"
-      BASE_URL: "https://jp.dmarcian.com/api/v1/"
+      BASE_URL: "https://xx.dmarcian.com/api/v1/"
     ports:
       - 5000:5000
 
