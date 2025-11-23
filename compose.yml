@@ -1,0 +1,18 @@
+name: graphana-dmarc
+
+services:
+  flask:
+    build:
+      context: .
+      dockerfile: ./compose/flask/Dockerfile
+    environment:
+      API_TOKEN: "Token 1234"
+      BASE_URL: "https://jp.dmarcian.com/api/v1/"
+    ports:
+      - 5000:5000
+
+  grafana:
+    image: grafana/grafana:latest
+    container_name: grafana
+    ports:
+      - "3000:3000"
